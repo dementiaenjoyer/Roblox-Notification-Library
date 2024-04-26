@@ -35,17 +35,24 @@ function NotificationLibrary:Notify(String, Time, TweenTime)
 	
 	local Entrace = TweenService:Create( Notification, TweenInfo.new(tonumber(TweenTime)), { TextTransparency = 0 } )
 	local Exit = TweenService:Create( Notification, TweenInfo.new(tonumber(TweenTime)), { TextTransparency = 1 } )
+	
 	Entrace:Play()
 	
 	Notification.Text = tostring(String)
 	
 	repeat
-		wait()
+		task.wait()
 	until Entrace.Completed
 	
 	task.wait(Time)
 	
 	Exit:Play()
+	
+	repeat
+		task.wait()
+	until Exit.Completed
+	
+	Notification:Destroy()
 
 end
 
