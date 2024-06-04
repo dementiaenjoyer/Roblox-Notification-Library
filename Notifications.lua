@@ -74,4 +74,4 @@ UIPadding.Parent = NotificationList
 UIPadding.PaddingBottom = UDim.new(0, 10)
 UIPadding.PaddingTop = UDim.new(0, 10)
 
-return NotificationLibrary -- // :DD
+return NotificationLibrary
