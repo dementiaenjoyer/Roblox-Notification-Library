@@ -78,7 +78,7 @@ do --// Logic
 				do --// Tweening
 					
 					local FadeIn = TweenService:Create( Notification, TweenInfo.new(Tween), { TextTransparency = 0 } )
-					local FadeOut = TweenService:Create( Notification, TweenInfo.new(Tween), { TextTransparency = 0 } )
+					local FadeOut = TweenService:Create( Notification, TweenInfo.new(Tween), { TextTransparency = 1 } )
 					
 					do --// Logic
 						
